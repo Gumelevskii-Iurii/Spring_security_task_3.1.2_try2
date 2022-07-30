@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+
+        .row {
+            font-style: italic;
+        }
+
+        .even-row {
+            color: black;
+        }
+
+        .odd-row {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h2>My page</h2>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>SecondName</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${user.id}">Id</td>
+        <td th:text="${user.firstName}">FirstName</td>
+        <td th:text="${user.secondName}">SecondName</td>
+        <td th:text="${user.email}">Email</td>
+        <td th:text="${user.age}">Age</td>
+        <td th:text="${user.password}">Password</td>
+    </tr>
+    </tbody>
+</table>
+
+<p><a href="/logout">Logout</a></p>
+
+</div>
+</body>
+</html>
+
