@@ -10,7 +10,7 @@
 
 <h1>Change user</h1>
 
-<form action="#" th:method="PUT" th:action="@{/changeUsers/{id}}" th:object="${user}">
+<form action="#" th:method="PUT" th:action="@{/changeUsers/{id}(id=${user.getId()})}" th:object="${user}">
 
     <label for="userId">UserId</label>
     <input readonly type="number" th:field="*{id}" id="userId" placeholder="UserId">
